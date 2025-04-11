@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, Button } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -12,36 +12,50 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
+        <Image
+        source={require('@/assets/images/b.png')}
+        style={styles.headerImage}
+      />
       }>
+
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Histórico</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>
+      <Button color={'darkblue'}
+      onPress={() =>{
+        console.log('You tapped the button!');
+      }}
+      title='Buscar'
+      />
+      </ThemedText>
+
+      <Collapsible title="Transferência">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+        Transferência enviada<br></br>Maria Luiza<br></br>199,99<br></br><ThemedText type="defaultSemiBold">VER MAIS</ThemedText>{' '}
         </ThemedText>
+        
         <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
+          Transferência recebida<br></br>de Maria Luiza<br></br> 99,99<br></br> <ThemedText
+           type="defaultSemiBold">VER MAIS</ThemedText>
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+          
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      <Collapsible title="Cartões">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+          Cartão Fisíco<br></br> Bianca Moreira 
         </ThemedText>
+
+        <ThemedText>
+          Cartão Virtual<br></br> Bianca Moreira 
+        </ThemedText>
+          <Button color={'darkblue'}
+      onPress={() =>{
+        console.log('You tapped the button!');
+      }}
+      title='Criar Cartão'
+      />
+
       </Collapsible>
       <Collapsible title="Images">
         <ThemedText>
@@ -49,7 +63,7 @@ export default function TabTwoScreen() {
           <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
           different screen densities
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
+        <Image source={require('@/assets/images/b.png')} style={{ alignSelf: 'center' }} />
         <ExternalLink href="https://reactnative.dev/docs/images">
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
@@ -98,8 +112,8 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     color: '#808080',
-    bottom: -90,
-    left: -35,
+    height: 250,
+    width: 400,
     position: 'absolute',
   },
   titleContainer: {
