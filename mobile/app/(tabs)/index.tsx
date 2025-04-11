@@ -8,7 +8,7 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#008b8b' }}
       headerImage={
         <Image
           source={require('@/assets/images/b.png')}
@@ -42,7 +42,16 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Saldo</ThemedText>
         <ThemedText>
+<<<<<<< HEAD
           1.212,27
+=======
+        <Button
+  onPress={() => {
+    console.log('You tapped the button!');
+  }}
+  title="Pix"
+/>
+>>>>>>> 2d4704b23e2abb451132fbafd24bd40dd24bdb8c
         </ThemedText>
         <Button color={'darkblue'}
       onPress={() =>{
