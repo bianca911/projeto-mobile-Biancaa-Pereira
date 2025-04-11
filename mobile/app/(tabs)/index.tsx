@@ -11,7 +11,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#008b8b' }}
       headerImage={
         <Image
-          source={require('@/assets/images/b.png')}
+          source={require('@/assets/images/bb.png')}
           style={styles.reactLogo}
         />
       }>
@@ -42,16 +42,8 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Saldo</ThemedText>
         <ThemedText>
-<<<<<<< HEAD
           1.212,27
-=======
-        <Button
-  onPress={() => {
-    console.log('You tapped the button!');
-  }}
-  title="Pix"
-/>
->>>>>>> 2d4704b23e2abb451132fbafd24bd40dd24bdb8c
+        
         </ThemedText>
         <Button color={'darkblue'}
       onPress={() =>{
